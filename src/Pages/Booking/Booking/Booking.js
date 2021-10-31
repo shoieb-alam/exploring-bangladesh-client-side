@@ -12,14 +12,14 @@ const Booking = () => {
     const { user } = useAuth();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${serviceId}`)
+        fetch(`https://frightening-broomstick-18685.herokuapp.com/${serviceId}`)
             .then(res => res.json())
             .then(data => setService(data));
     })
 
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:5000/bookings', data)
+        axios.post('https://frightening-broomstick-18685.herokuapp.com/bookings', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Package Booked Successfully');

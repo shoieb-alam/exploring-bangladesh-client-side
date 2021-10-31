@@ -7,7 +7,7 @@ const PackageAdding = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:5000/services', data)
+        axios.post('https://frightening-broomstick-18685.herokuapp.com/services', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Package Added Successfully');

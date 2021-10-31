@@ -7,13 +7,13 @@ const PackageManaging = () => {
     const [packages, setPackages] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services`)
+        fetch(`https://frightening-broomstick-18685.herokuapp.com/services`)
             .then(res => res.json())
             .then(data => setPackages(data));
     }, []);
 
     const handleDelete = id => {
-        axios.delete(`http://localhost:5000/services/${id}`)
+        axios.delete(`https://frightening-broomstick-18685.herokuapp.com/services/${id}`)
             .then(res => {
                 if (res.data.deletedCount > 0) {
                     alert('Are you sure to delete this Package?');

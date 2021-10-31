@@ -8,7 +8,7 @@ const Packages = () => {
     const [packages, setPackages] = useState([]);
     const { isLoading } = useAuth();
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://frightening-broomstick-18685.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setPackages(data));
     }, [])
@@ -16,6 +16,7 @@ const Packages = () => {
     if (isLoading) {
         return <Spinner animation="border" variant="info" />
     }
+
     return (
         <div id="packages" className="py-5">
             <div className="py-5">
