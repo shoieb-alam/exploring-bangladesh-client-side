@@ -15,7 +15,7 @@ const Booking = () => {
         fetch(`https://frightening-broomstick-18685.herokuapp.com/services/${serviceId}`)
             .then(res => res.json())
             .then(data => setService(data));
-    }, [])
+    }, [serviceId])
 
     const onSubmit = data => {
         console.log(data);
