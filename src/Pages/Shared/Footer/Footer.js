@@ -56,10 +56,10 @@ const Footer = () => {
                                 <h4>Useful Links</h4>
                             </div>
                             <div className="mt-4">
-                                <Link className="text-decoration-none text-white" to="/home">Home</Link> <br />
-                                <Link className="text-decoration-none text-white" to="/about">About Us</Link> <br />
-                                <Link as={HashLink} className="text-decoration-none text-white" to="/home#service">Tour Packages</Link> <br />
-                                <Link className="text-decoration-none text-white" to="/doctors">Gallary</Link> <br />
+                                <Link as={HashLink} className="text-decoration-none text-white" to="/home#banner">Home</Link> <br />
+                                <Link as={HashLink} className="text-decoration-none text-white" to="/home#packages">Tour Packages</Link> <br />
+                                <Link as={HashLink} className="text-decoration-none text-white" to="/home#success">Success</Link> <br />
+                                <Link as={HashLink} className="text-decoration-none text-white" to="/home#testimonial">Testimonials</Link> <br />
                             </div>
                         </Col>
 

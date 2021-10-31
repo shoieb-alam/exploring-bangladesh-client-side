@@ -29,15 +29,18 @@ const Booking = () => {
     };
 
     return (
+        // Package details 
         <div className="body mt-5 text-start">
+
             <Container>
                 <div className="d-flex justify-content-between">
                     <h2 className="text-primary">{service.name}</h2>
                     <div>
-                        <h4 className="text-danger">BDT: {service.price} </h4>
+                        <h4 className="text-danger">BDT: {service.price}</h4>
                         <p> Per Person Twin/Triple Basis </p>
                     </div>
                 </div>
+
                 <Row className="py-3 my-2 bg-light rounded-3">
                     <Col xs={1} md={6} lg={4}>
                         <img className="w-75 ms-5 rounded-3" src={service.img1} alt="" />
@@ -47,6 +50,7 @@ const Booking = () => {
                         <h6>{service.description1}</h6>
                     </Col>
                 </Row>
+
                 <Row className="py-3 my-2 bg-light rounded-3">
                     <Col xs={1} md={6} lg={4}>
                         <img className="w-75 ms-5 rounded-3" src={service.img2} alt="" />
@@ -56,6 +60,7 @@ const Booking = () => {
                         <h6>{service.description2}</h6>
                     </Col>
                 </Row>
+
                 <Row className="py-3 my-2 bg-light rounded-3">
                     <Col xs={1} md={6} lg={4}>
                         <img className="w-75 ms-5 rounded-3" src={service.img3} alt="" />
@@ -67,6 +72,7 @@ const Booking = () => {
                 </Row>
             </Container>
 
+            {/* Booking form  */}
             <div className="add-package p-5 text-center">
                 <h2>Book This Package</h2>
                 <form className="" onSubmit={handleSubmit(onSubmit)}>
@@ -75,8 +81,11 @@ const Booking = () => {
 
                     <input defaultValue={user.email} {...register("email", { required: true })} />
                     {errors.email && <span className="error">This field is required</span>}
+
                     <input defaultValue={service.name} {...register("package")} />
+
                     <input placeholder="Date" type="date" defaultValue="" {...register("date")} />
+
                     <input placeholder="Phone number" defaultValue="" {...register("phone")} />
 
                     <input type="submit" value="Book This Package" />

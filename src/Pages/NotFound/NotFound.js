@@ -5,7 +5,7 @@ import './NotFound.css';
 
 const NotFound = () => {
     return (
-        <div>
+        <div className="body">
             <div className="bg-404">
 
                 {/* Home Button */}

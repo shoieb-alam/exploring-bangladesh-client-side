@@ -6,7 +6,7 @@ import './Success.css'
 
 const Success = () => {
     return (
-        <div className="pt-5 success-bg">
+        <div id="success" className="pt-5 success-bg">
             <div className="py-5">
                 <h2>Why You Will Choose
                     <div className="py-3">
@@ -17,6 +17,7 @@ const Success = () => {
             </div>
             <div className="pb-5">
                 <Container>
+
                     <Row xs={1} md={2} lg={4}>
                         <Col>
                             <Card className="success-card p-3">
@@ -26,6 +27,7 @@ const Success = () => {
                                 </Card.Body>
                             </Card>
                         </Col>
+
                         <Col>
                             <Card className="success-card p-3">
                                 <Card.Body>
@@ -34,6 +36,7 @@ const Success = () => {
                                 </Card.Body>
                             </Card>
                         </Col>
+
                         <Col>
                             <Card className="success-card p-3">
                                 <Card.Body>
@@ -42,6 +45,7 @@ const Success = () => {
                                 </Card.Body>
                             </Card>
                         </Col>
+
                         <Col>
                             <Card className="success-card p-3">
                                 <Card.Body>

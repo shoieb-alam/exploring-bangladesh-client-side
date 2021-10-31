@@ -10,7 +10,7 @@ const MyPackages = () => {
     const [packages, setPackages] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/bookings/${bookingId}`)
+        fetch(`http://localhost:5000/mybookings/${bookingId}`)
             .then((res) => res.json())
             .then((data) => setPackages(data));
     }, [user.bookingId]);

@@ -1,3 +1,4 @@
-/* .carousel{
-    max-height: 500px;
-} */
+.bg-carousel{
+    background-color: rgba(34, 110, 59, 0.5);
+    border-radius: 30px;
+}

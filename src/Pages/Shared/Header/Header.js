@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import useAuth from '../../../hooks/useAuth';
@@ -40,19 +40,20 @@ const Header = () => {
 
                         <Nav className="ms-auto fw-bold">
                             <Nav.Link as={HashLink} to="/home#banner">Home</Nav.Link>
-                            <Nav.Link as={Link} to="/about">About Us</Nav.Link>
                             <Nav.Link as={HashLink} to="/home#packages">Tour Packages</Nav.Link>
-                            <Nav.Link as={Link} to="/gallary">Gallary</Nav.Link>
+                            <Nav.Link as={HashLink} to="/home#success">Success</Nav.Link>
+                            <Nav.Link as={HashLink} to="/home#testimonial">Testimonials</Nav.Link>
 
                             {/* showing username in the navbar if the user logged in  */}
                             {user?.email ?
                                 <>
-                                    <Nav.Link as={Link} to="/myPackages">My Package</Nav.Link>
-                                    <Nav.Link as={Link} to="/addPackage">Add Package</Nav.Link>
-                                    <Nav.Link as={Link} to="/managePackages">Manage Packages</Nav.Link>
-                                    <>
-                                        <Button onClick={logOut} variant="secondary" className="btn-outline-info rounded-pill px-3 ms-2">Logout {user?.displayName}</Button>
-                                    </>
+                                    <NavDropdown title={user?.displayName} menuVariant="dark" className="btn-outline-info rounded-pill px-3 ms-2" id="basic-nav-dropdown">
+                                        <NavDropdown.Item as={Link} to="/addPackage">Add Package</NavDropdown.Item>
+                                        <NavDropdown.Item as={Link} to="/managePackages">Manage Packages</NavDropdown.Item>
+                                        <NavDropdown.Item as={Link} to="/myPackages">My Package</NavDropdown.Item>
+                                        <NavDropdown.Divider />
+                                        <NavDropdown.Item onClick={logOut} variant="secondary" className="bg-warning text-black rounded-pill">Logout {user?.displayName}</NavDropdown.Item>
+                                    </NavDropdown>
                                 </>
 
                                 :

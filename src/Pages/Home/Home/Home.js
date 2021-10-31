@@ -13,7 +13,7 @@ const Home = () => {
         return <Spinner animation="border" variant="info" className="m-5 p-5" />
     }
     return (
-        <div id="home">
+        <div>
             <Banner></Banner>
             <Packages></Packages>
             <Success></Success>

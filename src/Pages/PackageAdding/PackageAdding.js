@@ -20,6 +20,7 @@ const PackageAdding = () => {
         <div className="add-package">
             <div className="bg-add-package mx-auto">
                 <h2>Add a Package</h2>
+
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <input {...register("name", { required: true, maxLength: 50 })} placeholder="Name" />
 
@@ -43,6 +44,7 @@ const PackageAdding = () => {
 
                     <input type="submit" value="Add" className="btn-outline-primary" />
                 </form>
+
             </div>
         </div>
     );

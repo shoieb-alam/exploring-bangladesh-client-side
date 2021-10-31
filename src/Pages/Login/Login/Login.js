@@ -32,6 +32,7 @@ const Login = () => {
                             alt="logo"
                         />
                     </div>
+
                     <div>
                         <h4 className="brand text-warning">X-PLORING </h4> <h6 className="text-info">BANGLADESH</h6>
                     </div>

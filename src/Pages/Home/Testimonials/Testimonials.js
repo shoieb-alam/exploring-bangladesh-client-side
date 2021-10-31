@@ -6,12 +6,14 @@ import './Testimonials.css';
 
 const Testimonials = () => {
     return (
-        <div className="bg-light">
+        <div id="testimonial" className="bg-light">
             <h1 className="pt-5">What <span className="text-info">
                 Travellers </span> Says</h1>
             <div className="py-5">
                 <Container>
+
                     <Row xs={1} md={2} lg={3}>
+
                         <Col>
                             <Card className="testimonial-card m-1">
                                 <Card.Img variant="top" className="w-50 mx-auto" src="https://i.ibb.co/VTD7WWn/iconfinder-8-avatar-2754583-120515.png" />
@@ -24,6 +26,7 @@ const Testimonials = () => {
                                 </Card.Body>
                             </Card>
                         </Col>
+
                         <Col>
                             <Card className="testimonial-card m-1">
                                 <Card.Img variant="top" className="w-50 mx-auto" src="https://i.ibb.co/09Yh7GC/image.png" />
@@ -36,6 +39,7 @@ const Testimonials = () => {
                                 </Card.Body>
                             </Card>
                         </Col>
+
                         <Col>
                             <Card className="testimonial-card m-1">
                                 <Card.Img variant="top" className="w-50 mx-auto" src="https://i.ibb.co/G7FJNqt/image.png" />

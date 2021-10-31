@@ -6,17 +6,18 @@ import './Package.css';
 
 const Package = ({ pack }) => {
     const { isLoading } = useAuth();
-
-    // const {service} = props;
     const { _id, name, price, duration, img1 } = pack;
 
     if (isLoading) {
         return <Spinner animation="border" variant="info" />
     }
+
     return (
         <div className="p-3">
+
             <Card className="card h-100">
                 <Card.Img variant="top" src={img1} className="h-100" />
+
                 <Card.Body>
                     <Card.Title className="text-start">{name}</Card.Title>
                     <Card.Text>

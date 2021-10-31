@@ -20,32 +20,41 @@ function App() {
       <AuthProvider>
         <Router>
           <Header></Header>
+
           <Switch>
             <Route exact path="/">
               <Home></Home>
             </Route>
+
             <Route path="/home">
               <Home></Home>
             </Route>
+
             <Route path="/login">
               <Login></Login>
             </Route>
+
             <PrivateRoute path="/booking/:serviceId">
               <Booking></Booking>
             </PrivateRoute>
+
             <PrivateRoute path="/myPackages">
               <MyPackages></MyPackages>
             </PrivateRoute>
-            <Route path="/addPackage">
+
+            <PrivateRoute path="/addPackage">
               <PackageAdding></PackageAdding>
-            </Route>
-            <Route path="/managePackages">
+            </PrivateRoute>
+
+            <PrivateRoute path="/managePackages">
               <PackageManaging></PackageManaging>
-            </Route>
+            </PrivateRoute>
+
             <Route path="*">
               <NotFound></NotFound>
             </Route>
           </Switch>
+
           <Footer></Footer>
         </Router>
       </AuthProvider>
