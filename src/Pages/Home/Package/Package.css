@@ -1,0 +1,11 @@
+.card{
+    border-radius: 20px;
+    padding: 10px;
+}
+.card:hover{
+    padding: 3px;
+    background-color: #a1fde6;
+}
+.card img{
+    border-radius: 20px;
+}

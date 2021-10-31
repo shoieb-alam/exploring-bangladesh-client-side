@@ -1,0 +1,9 @@
+.login{
+    background-image: url('https://i.ibb.co/FXVpF4T/image.png');
+    background-size: cover;
+    min-height: 650px;
+    padding-top: 90px;
+}
+.bg-login{
+    background-color: rgba(29, 25, 25, 0.8); 
+}

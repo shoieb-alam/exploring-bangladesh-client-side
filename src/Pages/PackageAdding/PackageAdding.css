@@ -1,0 +1,22 @@
+.add-package{
+    background-image: url('https://i.ibb.co/kKnC972/image.png');
+    background-size: cover;
+}
+.bg-add-package {
+    padding: 150px 0 100px;
+    background-color: rgba(29, 25, 25, 0.6); 
+    color: white;
+}
+.add-package form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-package form input, textarea{
+    width: 50%;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 15px;
+}
