@@ -1,39 +1,38 @@
-import React, { useEffect, useState } from 'react';
-import { Container, Row, Spinner } from 'react-bootstrap';
-import useAuth from '../../../hooks/useAuth';
-import Package from '../Package/Package';
-import './Packages.css';
+import React, { useEffect, useState } from "react";
+import { Container, Row, Spinner } from "react-bootstrap";
+import useAuth from "../../../hooks/useAuth";
+import { servicesAPI } from "../../../services/api";
+import Package from "../Package/Package";
+import "./Packages.css";
 
 const Packages = () => {
     const [packages, setPackages] = useState([]);
     const { isLoading } = useAuth();
     useEffect(() => {
-        fetch('https://frightening-broomstick-18685.herokuapp.com/services')
-            .then(res => res.json())
-            .then(data => setPackages(data));
-    }, [])
+        fetch(servicesAPI)
+            .then((res) => res.json())
+            .then((data) => setPackages(data));
+    }, []);
 
     if (isLoading) {
-        return <Spinner animation="border" variant="info" />
+        return <Spinner animation="border" variant="info" />;
     }
 
     return (
         <div id="packages" className="py-5">
             <div className="py-5">
                 <h4 id="">Our Packages</h4>
-                <h1 className="fw-bold">We're
+                <h1 className="fw-bold">
+                    We're
                     <span className="text-info"> Offering</span>
                 </h1>
             </div>
 
             <Container className="package-bg">
                 <Row xs={1} md={2} lg={3}>
-                    {
-                        packages.map(pack => <Package
-                            key={pack._id}
-                            pack={pack}
-                        ></Package>)
-                    }
+                    {packages.map((pack) => (
+                        <Package key={pack._id} pack={pack}></Package>
+                    ))}
                 </Row>
             </Container>
         </div>
