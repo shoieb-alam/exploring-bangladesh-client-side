@@ -1,6 +1,8 @@
 .login{
-    background-image: url('https://i.ibb.co/FXVpF4T/image.png');
+    background-image: url('https://i.ibb.co.com/GPrL7v6/Explore-Bangladesh-travel-destinations-1024x585.jpg');
     background-size: cover;
+    background-position: center;
+    /* background-attachment: fixed; */
     min-height: 650px;
     padding-top: 90px;
 }
