@@ -1,4 +1,6 @@
-const API_BASE_URL = "https://tourism-website-server-site.vercel.app";
+const serverUrl = "https://tourism-website-server-site.vercel.app";
+const localUrl = "http://localhost:5000";
+const API_BASE_URL = serverUrl;
 
 // export const API_ENDPOINTS = {
 //     houses: `${API_BASE_URL}/houses`,
